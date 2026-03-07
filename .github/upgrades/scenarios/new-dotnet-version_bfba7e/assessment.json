@@ -1,0 +1,147 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-03-01T22:18:24.7096916Z",
+  "analysisEndTime": "2026-03-01T22:18:34.6098709Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 2,
+      "incidents": 2,
+      "effort": 2
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 1,
+        "Optional": 0,
+        "Potential": 1,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 1,
+        "Project": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "MauiAppMinhasCompras\\MauiAppMinhasCompras.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "MauiAppMinhasCompras",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0-android",
+          "net8.0-ios",
+          "net8.0-maccatalyst",
+          "net8.0-windows10.0.19041.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 17,
+        "numberOfCodeFiles": 17,
+        "linesTotal": 281,
+        "linesOfCode": 281,
+        "totalApiScanned": 64,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "dce00780-f795-48a6-a7ff-501a965593a0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MauiAppMinhasCompras\\MauiAppMinhasCompras.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecomenda\u00E7\u00E3o:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.3",
+              "protected": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecomenda\u00E7\u00E3o:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.3"
+            },
+            "kind": "File",
+            "path": "MauiAppMinhasCompras\\MauiAppMinhasCompras.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecomenda\u00E7\u00E3o:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.3",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecomenda\u00E7\u00E3o:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.3",
+            "label": "Microsoft.Extensions.Logging.Debug 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Debug",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f24337d5-61eb-4d92-950c-c8f111c57036",
+          "ruleId": "Project.0002",
+          "projectPath": "MauiAppMinhasCompras\\MauiAppMinhasCompras.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Estrutura de destino atual: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nEstrutura de destino recomendada: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+              "protected": "Estrutura de destino atual: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nEstrutura de destino recomendada: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            },
+            "kind": "File",
+            "path": "MauiAppMinhasCompras\\MauiAppMinhasCompras.csproj",
+            "snippet": "Estrutura de destino atual: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nEstrutura de destino recomendada: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "protectedSnippet": "Estrutura de destino atual: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nEstrutura de destino recomendada: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "properties": {
+              "CurrentTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0",
+              "RecommendedTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "A atualiza\u00E7\u00E3o do pacote NuGet \u00E9 recomendada para a estrutura de destino selecionada.\n\nRecomenda-se que os pacotes padr\u00E3o do .NET tenham vers\u00F5es correspondentes \u00E0 vers\u00E3o do .NET que o projeto se destina.\n\nAlguns outros pacotes tamb\u00E9m s\u00E3o conhecidos por funcionar melhor para as estruturas de destino selecionadas.",
+      "label": "Recomenda-se a atualiza\u00E7\u00E3o do pacote NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "A estrutura de destino do projeto precisa ser alterada para a nova estrutura de destino que voc\u00EA selecionou para essa atualiza\u00E7\u00E3o.\n\nDurante a atualiza\u00E7\u00E3o, a estrutura de destino ser\u00E1 ajustada para a plataforma correspondente, quando aplic\u00E1vel. Em alguns casos, o projeto ter\u00E1 v\u00E1rias estruturas de destino ap\u00F3s\u00A0a atualiza\u00E7\u00E3o se estiver usando recursos que agora t\u00EAm suas pr\u00F3prias plataformas nas estruturas modernas do .NET (Windows, iOS, Android etc.).",
+      "label": "As estruturas de destino do projeto precisam ser alteradas",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Vis\u00E3o geral da portabilidade do .NET Framework para o .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDKs do projeto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

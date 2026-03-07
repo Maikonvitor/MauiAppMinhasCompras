@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.NovoProduto"
+             Title="Novo Produto">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
+
+            <Label Text="Descrição" FontSize="16" FontAttributes="Bold" />
+            <Entry x:Name="txtDescricao" Placeholder="Ex: Arroz, Feijão..." />
+
+            <Label Text="Quantidade" FontSize="16" FontAttributes="Bold" />
+            <Entry x:Name="txtQuantidade" Placeholder="Ex: 2" Keyboard="Numeric" />
+
+            <Label Text="Preço (R$)" FontSize="16" FontAttributes="Bold" />
+            <Entry x:Name="txtPreco" Placeholder="Ex: 5.99" Keyboard="Numeric" />
+
+            <Button Text="Salvar"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    FontSize="18"
+                    Margin="0,20,0,0"
+                    Clicked="btnSalvar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
