@@ -5,38 +5,44 @@ namespace MauiAppMinhasCompras.Helpers
 {
     public class SQLiteDatabaseHelper
     {
-        readonly SQLiteAsyncConnection _conn;
+        private readonly SQLiteAsyncConnection _conn;
+        private readonly Task _initializationTask;
 
-        public SQLiteDatabaseHelper(string path) 
-        { 
+        public SQLiteDatabaseHelper(string path)
+        {
             _conn = new SQLiteAsyncConnection(path);
-            _conn.CreateTableAsync<Produto>().Wait();
+            _initializationTask = _conn.CreateTableAsync<Produto>();
         }
 
-        public Task<int> Insert(Produto p) 
+        public async Task<int> Insert(Produto p)
         {
-            return _conn.InsertAsync(p);
+            await _initializationTask;
+            return await _conn.InsertAsync(p);
         }
 
-        public Task<int> Update(Produto p) 
+        public async Task<int> Update(Produto p)
         {
-            return _conn.UpdateAsync(p);
+            await _initializationTask;
+            return await _conn.UpdateAsync(p);
         }
 
-        public Task<int> Delete(int id) 
+        public async Task<int> Delete(int id)
         {
-            return _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
+            await _initializationTask;
+            return await _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
         }
 
-        public Task<List<Produto>> GetAll() 
+        public async Task<List<Produto>> GetAll()
         {
-            return _conn.Table<Produto>().ToListAsync();
+            await _initializationTask;
+            return await _conn.Table<Produto>().ToListAsync();
         }
 
-        public Task<List<Produto>> Search(string q) 
+        public async Task<List<Produto>> Search(string q)
         {
+            await _initializationTask;
             string sql = "SELECT * FROM Produto WHERE Descricao LIKE ?";
-            return _conn.QueryAsync<Produto>(sql, "%" + q + "%");
+            return await _conn.QueryAsync<Produto>(sql, "%" + q + "%");
         }
     }
 }
